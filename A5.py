@@ -65,7 +65,7 @@ for train_ix, test_ix in kfold.split(x_train, y_train):
     #es = EarlyStopping(monitor='val_loss', mode='min', verbose=1)
     history = model.fit(trainX, trainY, batch_size=32, epochs=10, verbose=0, validation_data=(testX, testY))
     loss, accuracy = model.evaluate(testX, testY, verbose=0)
-   # print('> %.3f' % (accuracy * 100.0))
+  
     accuracies.append(accuracy)
     histories.append(history)
     losses.append(loss)
